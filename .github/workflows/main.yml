@@ -15,7 +15,7 @@ jobs:
         key: ${{ secrets.project }}
         port: 22
         script: |
-          r10k deploy environment testing -pv
+          ls
 
 
 ## test
