@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using key
-    - script: | 
+    - bash: | 
 	    echo "
 		Host login
 		 HostName ${{ secrets.PROXY_HOST }}@login.stud.ntnu.no
