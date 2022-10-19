@@ -2,7 +2,7 @@ name: Deploy to Server2
 
 on:
   pull_request:
-    # Change to merge when implemented (still beta)teteteteteasasdasd
+    # Change to merge when implemented (still beta)teteteteteasasdasdsaasd
     types: [closed]
     branches:
       - testing
