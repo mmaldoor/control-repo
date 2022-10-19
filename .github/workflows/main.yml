@@ -10,6 +10,8 @@ jobs:
     steps:
      - name: executing remote ssh commands using key
        uses: appleboy/ssh-action@v0.1.4
+       run: |
+        echo 'CASignatureAlgorithms +ssh-rsa' > /etc/ssh/sshd_config
        with:
         host: ${{ secrets.host }}
         username: ${{ secrets.user }}
