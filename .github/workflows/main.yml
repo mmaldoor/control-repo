@@ -7,15 +7,12 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-  config:
-  - name: config 
-    steps:
-      script: echo 'CASignatureAlgorithms +ssh-rsa' > /etc/ssh/sshd_config
 
   build:
     name: Deploy
     steps:
     - name: executing remote ssh commands using key
+      script: echo 'CASignatureAlgorithms +ssh-rsa' > /etc/ssh/sshd_config
       uses: appleboy/ssh-action@v0.1.4
       with:
         host: ${{ secrets.host }}
