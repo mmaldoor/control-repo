@@ -7,7 +7,6 @@ jobs:
   build:
     name: Deploy
     runs-on: ubuntu-18.04
-    script: echo "CASignatureAlgorithms +ssh-rsa" >> /etc/ssh/sshd-config
     steps:
     - name: executing remote ssh commands using key
       uses: appleboy/ssh-action@master
