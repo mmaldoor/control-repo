@@ -1,3 +1,4 @@
+
 name: Deploy to Server2
 
 on: [push]
@@ -5,16 +6,20 @@ on: [push]
 jobs:
   build:
     name: Deploy
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
+    script: echo "CASignatureAlgorithms +ssh-rsa" >> /etc/ssh/sshd-config
     steps:
     - name: executing remote ssh commands using key
-    - bash: | 
-echo "
-Host login
-HostName ${{ secrets.PROXY_HOST }}@login.stud.ntnu.no
-Preferredauthentications publickey
-StrictHostKeyChecking no
-IdentityFile ${{ secrets.TAFI_LOGIN }}
-" > .ssh/config
-
-	ssh login 'whoami'
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.host }}
+        username: ${{ secrets.user }}
+        key: ${{ secrets.project }}
+        port: ${{ secrets.port }}
+        proxy_host: ${{ secrets.PROXY_HOST }}
+        proxy_username: ${{ secrets.PROXY_USERNAME }}
+        proxy_key: ${{ secrets.TAFI.LOGIN }}
+        proxy_port: ${{ secrets.PROXY_PORT }}
+        fingerprint: ${{ secrets.FINGERPRINT }}
+        script: |
+          echo "ffss"
