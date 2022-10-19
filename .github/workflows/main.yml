@@ -14,9 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using key
+      uses: appleboy/ssh-action@v0.1.4
+      if: github.event.pull_request.merged == true
       with:
         host: ${{ secrets.host }}
         username: ${{ secrets.user }}
         key: ${{ secrets.project }}
+        port: 22
         script: |
-           r10k deploy environment testing -pv
+          r10k deploy environment testing -pv
