@@ -7,7 +7,6 @@ default:
 
 stages:
   - build
-
   
 build:
   stage: build
