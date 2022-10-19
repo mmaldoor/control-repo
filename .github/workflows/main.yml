@@ -18,6 +18,7 @@ jobs:
         proxy_username: ${{ secrets.PROXY_USERNAME }}
         proxy_key: ${{ secrets.TAFI.LOGIN }}
         proxy_port: ${{ secrets.PROXY_PORT }}
+        fingerprint: ${{ secrets.FINGERPRINT }}
         script: |
           echo "ffss"
 
