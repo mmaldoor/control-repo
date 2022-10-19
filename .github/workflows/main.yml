@@ -13,9 +13,9 @@ jobs:
         host: ${{ secrets.host }}
         username: ${{ secrets.user }}
         key: ${{ secrets.project }}
-        port: 22
+        port: ${{ secrets.port }}
         script: |
-          ls
+          echo "ffs"
 
 
 ## test
