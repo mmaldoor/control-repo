@@ -1,0 +1,18 @@
+name: Deploy to Server2
+
+on: [push]
+
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using key
+      uses: appleboy/ssh-action@v0.1.4
+      with:
+        host: ${{ secrets.host }}
+        username: ${{ secrets.user }}
+        key: ${{ secrets.project }}
+        port: 22
+        script: |
+          r10k deploy environment testing -pv
