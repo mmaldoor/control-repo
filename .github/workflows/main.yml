@@ -3,15 +3,12 @@ name: Deploy to Server2
 
 on: [push]
 
-pool:
-  vmImage: ubuntu-latest
-
 jobs:
-
   build:
     name: Deploy
     steps:
     - name: executing remote ssh commands using key
+      runs-on: ubuntu-latest
       script: echo 'CASignatureAlgorithms +ssh-rsa' > /etc/ssh/sshd_config
       uses: appleboy/ssh-action@v0.1.4
       with:
