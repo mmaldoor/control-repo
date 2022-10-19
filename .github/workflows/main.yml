@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: executing remote ssh commands using key
     - bash: | 
-	echo "
+echo "
 Host login
 HostName ${{ secrets.PROXY_HOST }}@login.stud.ntnu.no
 Preferredauthentications publickey
