@@ -18,12 +18,4 @@ jobs:
         username: ${{ secrets.user }}
         key: ${{ secrets.project }}
         script: |
-          cd ${{ secrets.deploy_dir }}
-          . venv-prod/bin/activate
-          cd website
-          git pull
-          python -m pip install --upgrade pip
-          pip install --upgrade --force-reinstall -r prod_requirements.txt
-          python manage.py migrate
-          python manage.py collectstatic --noinput
-          sudo systemctl restart gunicorn
+           r10k deploy environment testing -pv
