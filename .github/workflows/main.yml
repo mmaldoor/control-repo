@@ -14,7 +14,6 @@ jobs:
     steps:
     - name: executing remote ssh commands using key
       uses: appleboy/ssh-action@v0.1.4
-      if: github.event.pull_request.merged == true
       with:
         host: ${{ secrets.host }}
         username: ${{ secrets.user }}
