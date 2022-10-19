@@ -6,10 +6,11 @@ on: [push]
 jobs:
   build:
     name: Deploy
+    runs-on: ubuntu-latest
     steps:
+    - name: configuring
+
     - name: executing remote ssh commands using key
-      runs-on: ubuntu-latest
-      script: echo 'CASignatureAlgorithms +ssh-rsa' > /etc/ssh/sshd_config
       uses: appleboy/ssh-action@v0.1.4
       with:
         host: ${{ secrets.host }}
