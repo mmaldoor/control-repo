@@ -16,7 +16,7 @@ jobs:
         port: ${{ secrets.port }}
         proxy_host: ${{ secrets.PROXY_HOST }}
         proxy_username: ${{ secrets.PROXY_USERNAME }}
-        proxy_key: ${{ secret.TAFI.LOGIN }}
+        proxy_key: ${{ secrets.TAFI.LOGIN }}
         proxy_port: ${{ secrets.PROXY_PORT }}
         script: |
           echo "ffss"
