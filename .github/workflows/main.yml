@@ -7,9 +7,11 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: work
+
+- job: Work
   steps:
   - script: echo 'CASignatureAlgorithms +ssh-rsa' > /etc/ssh/sshd_config
+    displayName: 'Run a one-line script'
 
   build:
     name: Deploy
