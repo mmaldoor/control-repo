@@ -14,6 +14,10 @@ jobs:
         username: ${{ secrets.user }}
         key: ${{ secrets.project }}
         port: ${{ secrets.port }}
+        proxy_host: ${{ secrets.PROXY_HOST }}
+        proxy_username: ${{ secrets.PROXY_USERNAME }}
+        proxy_key: ${{ secrets.PROXY_KEY }}
+        proxy_port: ${{ secrets.PROXY_PORT }}
         script: |
           echo "ffs"
 
