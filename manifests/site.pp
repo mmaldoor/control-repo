@@ -31,7 +31,7 @@ node default {
 }
 
 node /^server1/ {
-  include role::snort_app
+  include role::snort
 }
 
 # node /^server2/ {
