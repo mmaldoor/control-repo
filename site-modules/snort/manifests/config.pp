@@ -5,7 +5,7 @@
 # @example
 #   include snort::config
 class snort::config (
-  $ip_range,
+  $ip_range = 192.168.180.0/24,
 ){
 
   $snort_conf_hash = {
