@@ -30,11 +30,11 @@ node default {
   #   class { 'my_class': }
 }
 
-node /^pasture-app/ {
+node /^server1/ {
   include role::pasture_app
 }
 
-node /^pasture-db/ {
+node /^srver2/ {
   include role::pasture_db
 }
 # From control-repo
