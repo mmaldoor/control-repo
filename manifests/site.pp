@@ -34,7 +34,7 @@ node /^server1/ {
   include role::pasture_app
 }
 
-node /^srver2/ {
+node /^server2/ {
   include role::pasture_db
 }
 # From control-repo
