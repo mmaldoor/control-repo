@@ -26,3 +26,6 @@ mod 'puppet-r10k',            '7.0.0'
 mod 'puppetlabs-ruby',        '1.0.1'
 mod 'puppetlabs-vcsrepo',     '2.4.0'
 mod 'puppetlabs-git',         '0.5.0'
+
+# snort
+mod 'puppet-archive',         '6.0.2'
