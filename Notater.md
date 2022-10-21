@@ -34,3 +34,10 @@ puppet agent -t
 **start snort**
 
     sudo snort -d -l /var/log/snort/ -h 192.168.180.0/24 -A console -c /etc/snort/snort.conf
+
+
+
+# modules used
+
+puppet module install puppet-archive --version 6.0.2
+
