@@ -11,6 +11,6 @@ class snort (
   contain snort::install
 
   class {'snort::config':
-    $ip_range
+    ip_range => $ip_range
   }
 }
