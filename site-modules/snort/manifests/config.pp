@@ -31,7 +31,7 @@ class { 'archive':
                   extract       => true,
                   extract_path  => '/etc/snort/rules',
                   source        => 'https://www.snort.org/rules/snortrules-snapshot-2983.tar.gz?oinkcode=edbd39c3beb231a12ecf24e55ac03d873878bab4',
-                  cleanup       => true,
+                  # cleanup       => true,
                   }, }
 
 
