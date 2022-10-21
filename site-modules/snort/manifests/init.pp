@@ -4,7 +4,13 @@
 #
 # @example
 #   include snort
-class snort {
+class snort (
+  $ip_range,
+){
+  
   contain snort::install
-  # contain snort::config
+
+  class {'snort::config':
+    $ip_range
+  }
 }

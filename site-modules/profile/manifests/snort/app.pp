@@ -1,4 +1,6 @@
 #Men for fææn
 class profile::snort::app {
-  include snort
+  class {'snort':
+  ip_range => 192.168.180.0/24
+  }
 }
