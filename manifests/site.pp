@@ -31,10 +31,11 @@ node default {
 }
 
 node /^server1/ {
-  include role::snort
+  include role::snort_app
 }
 
 # node /^server2/ {
 #   include role::pasture_db
 # }
 # From control-repo
+#f
