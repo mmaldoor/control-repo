@@ -8,8 +8,6 @@ class snort::install {
   package { 'snort':
     ensure => present,
   }
-
-
   # if $facts['osfamily'] != 'windows' {
   #   package { 'wget':
   #     ensure => present,
