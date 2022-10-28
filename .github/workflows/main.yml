@@ -14,7 +14,7 @@ jobs:
       with:
        host: ${{ secrets.HOST }}
        username: ${{ secrets.USER }}
-       key: ${{ secrets.MANAGER_PRIV }}
+       key: ${{ secrets.PROJECT }}
        port: ${{ secrets.PORT }}
        proxy_host: ${{ secrets.PROXY_HOST }}
        proxy_username: ${{ secrets.PROXY_USERNAME }}
