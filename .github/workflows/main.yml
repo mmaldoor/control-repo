@@ -17,6 +17,6 @@ jobs:
        key: ${{ secrets.TAFI.LOGIN }}
        port: ${{ secrets.PROXY_PORT }}
        script: |
-         echo "ffsffssffffffs"
+         echo "ffsffssaffffffs"
 
 
