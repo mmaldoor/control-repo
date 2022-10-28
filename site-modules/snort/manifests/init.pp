@@ -8,7 +8,7 @@ class snort (
   $ip_range,
 ) {
   contain snort::install
-  class {'snort::config':
+  class { 'snort::config':
     ip_range => $ip_range
   }
 }

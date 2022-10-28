@@ -19,8 +19,8 @@ class snort::config (
 # Class: name
 #
 #
-class { 'archive':
-}
+
+include 'archive'
 
 archive { '/tmp/snortrules-snapshot-2983.tar.gz':
   ensure        => present,
