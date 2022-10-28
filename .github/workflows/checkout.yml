@@ -40,7 +40,7 @@ jobs:
 
 
       - name: Stop the server
-        run: ssh staging 'echo from manager'
+        run: ssh staging ' r10k deploy environment testing -pv'
 
       # - name: Check out the source
       #   run: ssh staging 'cd my-application && git fetch && git reset --hard origin/master'
