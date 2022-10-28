@@ -22,6 +22,6 @@ jobs:
        proxy_port: ${{ secrets.PROXY_PORT }}
        fingerprint: ${{ secrets.FINGERPRINT }}
        script: |
-         echo "ffsffssf"
+         echo "ffsffssff"
 
 
