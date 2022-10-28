@@ -15,3 +15,17 @@ forge 'https://forge.puppet.com'
 #mod 'apache',
 #  git:    'https://github.com/puppetlabs/puppetlabs-apache',
 #  branch: 'docs_experiment'
+
+# pasture-db
+mod 'puppetlabs-postgresql', '8.2.1'
+mod 'puppetlabs-stdlib', '8.4.0'
+mod 'puppetlabs-concat', '7.3.0'
+
+# r10k
+mod 'puppet-r10k',            '7.0.0'
+mod 'puppetlabs-ruby',        '1.0.1'
+mod 'puppetlabs-vcsrepo',     '2.4.0'
+mod 'puppetlabs-git',         '0.5.0'
+
+# snort
+mod 'puppet-archive',         '6.0.2'
