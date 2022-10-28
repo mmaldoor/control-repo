@@ -8,5 +8,5 @@ class snort (
   $ip_range,
 ) {
   contain snort::install
-  include archive
+  # include archive
 }
