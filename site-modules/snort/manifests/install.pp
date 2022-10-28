@@ -23,7 +23,7 @@ class snort::install {
   #   }
   # }
 
-  # Archive {
-  #   provider => 'ruby',
-  # }
+  Archive {
+    provider => 'ruby',
+  }
 }
