@@ -16,6 +16,12 @@ class snort::config (
   }
 }
 
+# Class: name
+#
+#
+class { 'archive':
+}
+
 archive { '/tmp/snortrules-snapshot-2983.tar.gz':
   ensure        => present,
   extract       => true,
