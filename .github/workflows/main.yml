@@ -12,16 +12,10 @@ jobs:
     - name: executing remote ssh commands using key
       uses: appleboy/ssh-action@v0.1.4
       with:
-       host: ${{ secrets.HOST }}
-       username: ${{ secrets.USER }}
-       key: ${{ secrets.PROJECT }}
-       port: ${{ secrets.PORT }}
-       proxy_host: ${{ secrets.PROXY_HOST }}
-       use_insecure_cipher: true
-       proxy_username: ${{ secrets.PROXY_USERNAME }}
-       proxy_key: ${{ secrets.TAFI.LOGIN }}
-       proxy_port: ${{ secrets.PROXY_PORT }}
-       proxy_use_insecure_cipher: true
+       host: ${{ secrets.PROXY_HOST }}
+       username: ${{ secrets.PROXY_USERNAME }}
+       key: ${{ secrets.TAFI.LOGIN }}
+       port: ${{ secrets.PROXY_PORT }}
        script: |
          echo "ffsffssffffff"
 
