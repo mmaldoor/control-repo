@@ -1,5 +1,5 @@
+#
 class motd {
-
   $motd_hash = {
     'fqdn'       => $facts['networking']['fqdn'],
     'os_family'  => $facts['os']['family'],
