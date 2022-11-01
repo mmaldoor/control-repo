@@ -81,46 +81,6 @@ jobs:
       - name: running r10k
         run: ssh staging ' r10k deploy environment production -pv'
 
-
-  deploy_oink:
-    name: "Deploy to production"
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/oink'
-    # needs: test
-    steps:
-      - name: Configure SSH
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$SSH_KEY" > ~/.ssh/staging.key
-          chmod 600 ~/.ssh/staging.key
-          echo "$PROXY_KEY" > ~/.ssh/proxy.key
-          chmod 600 ~/.ssh/proxy.key
-          cat >>~/.ssh/config <<END
-          Host proxy
-            HostName $PROXY_HOST
-            User $PROXY_USERNAME
-            StrictHostKeyChecking no
-            IdentityFile ~/.ssh/proxy.key
-
-          Host staging
-            HostName $SSH_HOST
-            User $SSH_USER
-            IdentityFile ~/.ssh/staging.key
-            StrictHostKeyChecking no
-            ProxyJump proxy
-          END
-        env:
-          SSH_USER: ${{ secrets.USER }}
-          SSH_KEY: ${{ secrets.PROJECT }}
-          SSH_HOST: ${{ secrets.HOST }}
-          PROXY_HOST: ${{ secrets.PROXY_HOST }}
-          PROXY_USERNAME: ${{ secrets.PROXY_USERNAME }}
-          PROXY_KEY: ${{ secrets.TAFI_LOGIN }}
-
-
-      - name: running r10k
-        run: ssh staging ' r10k deploy environment oink -pv'
-
       # - name: Check out the source
       #   run: ssh staging 'cd my-application && git fetch && git reset --hard origin/master'
 
