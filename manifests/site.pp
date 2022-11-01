@@ -30,7 +30,7 @@ node default {
   #   class { 'my_class': }
 }
 
-node /^server1/ {
+node /^server2/ {
   include role::snort_app
 }
 

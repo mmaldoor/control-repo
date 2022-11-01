@@ -1,1 +1,2 @@
---- {}
+---
+profile::snort::app::ip_range
