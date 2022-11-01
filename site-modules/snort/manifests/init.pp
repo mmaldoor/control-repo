@@ -3,6 +3,10 @@
 # A description of what this class does
 #
 # @example
-#   include snort::config
-class snort::config {
+#   include snort
+class snort (
+  $ip_range,
+) {
+  contain snort::install
+  contain snort::config
 }

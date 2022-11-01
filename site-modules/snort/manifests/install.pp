@@ -5,4 +5,12 @@
 # @example
 #   include snort::install
 class snort::install {
+  package { 'snort':
+    ensure => present,
+  }
+
+  Archive {
+    ensure   => 'present',
+    provider => 'wget',
+  }
 }
