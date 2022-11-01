@@ -10,5 +10,4 @@ class motd {
   file { '/etc/motd':
     content => epp('motd/motd.epp', $motd_hash),
   }
-
 }

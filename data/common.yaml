@@ -1,5 +1,2 @@
 ---
-profile::pasture::app::default_message: "Baa"
-profile::pasture::app::sinatra_server: "thin"
-profile::pasture::app::default_character: "cow"
-profile::pasture::app::db: "none"
+
