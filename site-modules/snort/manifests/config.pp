@@ -12,7 +12,8 @@ class snort::config (
   }
 
   file { '/etc/snort/snort.conf':
-    content => epp('snort/snort_conf.yaml.epp', $snort_conf_hash)
+    content => epp('snort/snort_conf.yaml.epp', $snort_conf_hash),
+    notify  => Service['pasture'],
   }
 
 # Class: name
@@ -28,5 +29,12 @@ class snort::config (
     source        => 'https://www.snort.org/rules/snortrules-snapshot-2983.tar.gz?oinkcode=edbd39c3beb231a12ecf24e55ac03d873878bab4',
     creates       => '/tmp/snortrules.tar.gz',
     cleanup       => false,
+    notify        => Service['snort'],
+  }
+
+  service { 'snort':
+    ensure  => running,
+    enable  => true,
+    require => File['/etc/snort/snort.conf'],
   }
 }
