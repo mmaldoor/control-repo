@@ -33,8 +33,8 @@ class snort::config (
   }
 
   file { '/etc/systemd/system/pasture.service':
-    source => 'puppet:///modules/pasture/pasture.service',
-    notify => Service['pasture'],
+    source => 'puppet:///modules/snort/snort.service',
+    notify => Service['snort'],
   }
 
   service { 'snort':
