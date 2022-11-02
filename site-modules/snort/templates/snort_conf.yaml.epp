@@ -1,5 +1,4 @@
 <%- | $ip_range,
-    #   $logdir,
 | -%>
 
 #--------------------------------------------------
@@ -194,13 +193,10 @@ config checksum_mode: all
 #
 # config bpf_file:
 #
-CONF=/etc/snort/snort.conf
-
 
 # Configure default log directory for snort to log to.  For more information see snort -h command line options (-l)
 #
 # config logdir:
-LOGDIR=/var/log/snort
 
 
 ###################################################

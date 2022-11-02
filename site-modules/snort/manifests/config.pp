@@ -32,6 +32,11 @@ class snort::config (
     notify        => Service['snort'],
   }
 
+  file { '/etc/systemd/system/pasture.service':
+    source => 'puppet:///modules/pasture/pasture.service',
+    notify => Service['pasture'],
+  }
+
   service { 'snort':
     ensure  => running,
     enable  => true,
