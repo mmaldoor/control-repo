@@ -3,7 +3,5 @@ plan adhoc::myplan(
   # input parameters go here
   TargetSpec $targets,
 ) {
-
   # plan steps go here
-
 }
