@@ -13,7 +13,7 @@ class snort::config (
 
   file { '/etc/snort/snort.conf':
     content => epp('snort/snort_conf.yaml.epp', $snort_conf_hash),
-    notify  => Service['pasture'],
+    notify  => Service['snort'],
   }
 
 # Class: name
