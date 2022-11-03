@@ -16,6 +16,19 @@ class snort::config (
     notify  => Service['snort'],
   }
 
+  exec { 'Promisc mode':
+    command => 'sudo ip link set enp0s3 promisc on',
+    path    => '/usr/local/bin/:/bin/',
+    unless  => 'netstat -i | grep ens3 | grep P',
+  }
+
+  ##discord
+
+  file { '/usr/local/bin':
+    source => 'puppet:///modules/snort/discord.sh',
+    mode   => '0644',
+  }
+
 # Class: name
 #
 #
@@ -41,5 +54,3 @@ class snort::config (
     require => File['/etc/snort/snort.conf'],
   }
 }
-    # checksum      => 'd0431bd39e082f8c1acd5c5c6df41980',
-    # checksum_type => 'md5',
