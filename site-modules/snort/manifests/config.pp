@@ -24,7 +24,7 @@ class snort::config (
 
   ##discord
 
-  file { '/usr/local/bin':
+  file { '/usr/local/bin/discord.sh':
     source => 'puppet:///modules/snort/discord.sh',
     mode   => '0644',
   }
