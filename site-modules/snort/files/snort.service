@@ -4,7 +4,7 @@ After=syslog.target network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/sbin/snort -q -u snort -g snort -c /etc/snort/snort.conf -l /var/log/snort/ -h 192.168.180.0/24
+ExecStart=/usr/sbin/snort -q -u snort -g snort -c /etc/snort/snort.conf -l /var/log/snort/ -i ens3
 
 [Install]
 WantedBy=multi-user.target
