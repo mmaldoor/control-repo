@@ -30,9 +30,9 @@ node default {
   #   class { 'my_class': }
 }
 
-# node /^server1/ {
-#   include role::snort_app
-# }
+node /^server1/ {
+  include role::snort_app
+}
 
 node /^server2/ {
   include role::snort_app

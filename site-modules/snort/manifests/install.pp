@@ -6,14 +6,15 @@
 #   include snort::install
 class snort::install {
   package { 
+    'libdumbnet-dev':
+      ensure => installed;
+    'build-essential':
+      ensure => installed;
+    'tcpdump':
+      ensure => installed;
+    'libdaq-dev':
+      ensure => installed;
     'snort':
       ensure => installed;
-    'daq':
-      ensure => installed;
   }
-
-  # Archive {
-  #   ensure   => 'present',
-  #   provider => 'wget',
-  # }
 }
