@@ -41,7 +41,5 @@ class snort::config (
     require => File['/etc/snort/snort.conf'],
   }
 }
-
-
     # checksum      => 'd0431bd39e082f8c1acd5c5c6df41980',
     # checksum_type => 'md5',
