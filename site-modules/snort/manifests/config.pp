@@ -17,7 +17,7 @@ class snort::config (
   }
 
   exec { 'Promisc mode':
-    command => 'sudo ip link set enp0s3 promisc on',
+    command => 'ip link set enp0s3 promisc on',
     path    => '/usr/local/bin/:/bin/',
     unless  => 'netstat -i | grep ens3 | grep P',
   }
