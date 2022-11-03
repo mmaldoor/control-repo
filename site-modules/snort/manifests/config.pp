@@ -17,7 +17,7 @@ class snort::config (
   }
 
   exec { 'Promisc mode':
-    command => 'ip link set enp0s3 promisc on',
+    command => 'ip link set ens3 promisc on',
     path    => '/usr/local/bin/:/bin/',
     unless  => 'netstat -i | grep ens3 | grep P',
   }
@@ -25,6 +25,7 @@ class snort::config (
   ##discord
 
   file { '/usr/local/bin/discord':
+    ensure => present,
     source => 'puppet:///modules/snort/discord.sh',
     mode   => '0744',
   }
