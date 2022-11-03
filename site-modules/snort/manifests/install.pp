@@ -18,7 +18,6 @@ class snort::install {
 
   package { 'snort':
     ensure          => 'present',
-    install_options => ['-override', '-installArgs', '"', 'ens3', '192.168.180.0/24', 'ens3', '"'],
-
+    install_options => ['-override', '"', 'ens3', '192.168.180.0/24', 'ens3', '"'],
   }
 }
