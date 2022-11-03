@@ -30,7 +30,7 @@ class snort::config (
     notify        => Service['snort'],
   }
 
-  file { '/lib/systemd/system/snort.service':
+  file { '/etc/systemd/system/snort.service':
     source => 'puppet:///modules/snort/snort.service',
     notify => Service['snort'],
   }
