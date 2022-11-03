@@ -9,8 +9,8 @@ class snort::install {
     ensure => present,
   }
 
-  # Archive {
-  #   ensure   => 'present',
-  #   provider => 'wget',
-  # }
+  Archive {
+    ensure   => 'present',
+    provider => 'wget',
+  }
 }
