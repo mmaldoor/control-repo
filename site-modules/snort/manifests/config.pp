@@ -49,6 +49,11 @@ class snort::config (
     notify => Service['snort'],
   }
 
+  file { '/etc/snort/snort.debian.conf':
+    source => 'puppet:///modules/snort/snort.debian.conf',
+    notify => Service['snort'],
+  }
+
   service { 'snort':
     ensure  => running,
     enable  => true,
