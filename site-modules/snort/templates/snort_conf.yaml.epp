@@ -537,6 +537,8 @@ preprocessor dnp3: ports { 20000 } \
 # Recommended for most installs
 # output unified2: filename merged.log, limit 128, nostamp, mpls_event_types, vlan_event_types
 output unified2: filename snort.log, limit 128, nostamp, mpls_event_types, vlan_event_types
+output alert_fast: filename snort.log > discord
+
 # output alert_full: filename alert.full
 
 # Additional configuration for specific types of installs
