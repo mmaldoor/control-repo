@@ -5,8 +5,11 @@
 # @example
 #   include snort::install
 class snort::install {
-  package { 'snort':
-    ensure => present,
+  package { 
+    'snort':
+      ensure => installed;
+    'daq':
+      ensure => installed;
   }
 
   # Archive {
