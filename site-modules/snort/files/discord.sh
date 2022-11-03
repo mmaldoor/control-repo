@@ -6,7 +6,7 @@ PARENT=$(tr -d "\0" </proc/$PPID/cmdline)
 
 URL="https://discordapp.com/api/webhooks/950693006233727046/XeWWAw7jrNqmOaWM7fE52-_w5xEE0XUUUmjLbscDWH6t8196UvYsc6YlXB756y-8277H"
 
-USERNAME="Bookface [$HOSTNAME / $MYIP] $PARENT"
+USERNAME="SNORT [$HOSTNAME / $MYIP] $PARENT"
 
 if echo $USERNAME | grep "/var/lib/cloud/"; then
 USERNAME="Bookface [$HOSTNAME / $MYIP] cloud-init"
