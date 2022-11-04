@@ -6,6 +6,7 @@
 #   include snort
 class snort (
   $ip_range,
+  $interface,
 ) {
   contain snort::install
   contain snort::config
