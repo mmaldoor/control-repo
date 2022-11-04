@@ -5,8 +5,8 @@
 # @example
 #   include snort::config
 class snort::config (
-  $ip_range,
-  $interface,
+  $ip_range = '192.168.180.0/24',  #defaults
+  $interface = 'ens3',
 ) {
   $snort_conf_hash = {
     'ip_range' => $ip_range,
@@ -18,8 +18,8 @@ class snort::config (
   }
 
   $snort_debian_conf_hash = {
-    'ip_range' => $ip_range,
-    'interface'=> $interface,
+    'ip_range'  => $ip_range,
+    'interface' => $interface,
   }
 
   file { '/etc/snort/snort.debian.conf':
