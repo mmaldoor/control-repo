@@ -5,8 +5,8 @@
 # @example
 #   include snort::config
 class snort::config (
-  $ip_range = '192.168.180.0/24',  #defaults
-  $interface = 'ens3',
+  $ip_range,  #defaults
+  $interface,
 ) {
   $snort_conf_hash = {
     'ip_range' => $ip_range,
