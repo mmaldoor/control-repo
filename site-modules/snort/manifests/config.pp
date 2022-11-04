@@ -1,6 +1,6 @@
 # @summary A short summary of the purpose of this class
 #
-# A description of what this class does
+# A description of what this class doess
 #
 # @example
 #   include snort::config
@@ -38,7 +38,7 @@ class snort::config (
   file { '/usr/local/bin/discord':
     ensure => present,
     source => 'puppet:///modules/snort/discord.sh',
-    mode   => '0777',
+    mode   => '0766',
   }
 
 # Class: name
