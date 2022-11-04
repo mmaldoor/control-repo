@@ -1,0 +1,11 @@
+<%- | $ip_range,
+      $interface,
+| -%>
+
+DEBIAN_SNORT_STARTUP="boot"
+DEBIAN_SNORT_HOME_NET= <%= $ip_range %>
+DEBIAN_SNORT_OPTIONS=""
+DEBIAN_SNORT_INTERFACE= <%= $interface %>
+DEBIAN_SNORT_SEND_STATS="true"
+DEBIAN_SNORT_STATS_RCPT="root"
+DEBIAN_SNORT_STATS_THRESHOLD="1"

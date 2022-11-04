@@ -5,14 +5,25 @@
 # @example
 #   include snort::config
 class snort::config (
-  $ip_range = '192.168.180.0/24',
+  $ip_range,
+  $interface,
 ) {
   $snort_conf_hash = {
-    'ip_range' => $ip_range
+    'ip_range' => $ip_range,
   }
 
   file { '/etc/snort/snort.conf':
     content => epp('snort/snort_conf.yaml.epp', $snort_conf_hash),
+    notify  => Service['snort'],
+  }
+
+  $snort_debian_conf_hash = {
+    'ip_range' => $ip_range,
+    'interface'=> $interface,
+  }
+
+  file { '/etc/snort/snort.debian.conf':
+    content => epp('snort/snort.debian.conf.epp', $snort_debian_conf_hash),
     notify  => Service['snort'],
   }
 
@@ -27,7 +38,7 @@ class snort::config (
   file { '/usr/local/bin/discord':
     ensure => present,
     source => 'puppet:///modules/snort/discord.sh',
-    mode   => '0744',
+    mode   => '0777',
   }
 
 # Class: name
@@ -46,11 +57,6 @@ class snort::config (
 
   file { '/etc/systemd/system/snort.service':
     source => 'puppet:///modules/snort/snort.service',
-    notify => Service['snort'],
-  }
-
-  file { '/etc/snort/snort.debian.conf':
-    source => 'puppet:///modules/snort/snort.debian.conf',
     notify => Service['snort'],
   }
 
