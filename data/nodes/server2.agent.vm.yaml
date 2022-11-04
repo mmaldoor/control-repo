@@ -1,4 +1,4 @@
 ---
 profile::snort::app::ip_range: '192.168.180.0/24'
-profile::snort::app::interface: 'ens4'
+profile::snort::app::interface: 'ens3'
 
